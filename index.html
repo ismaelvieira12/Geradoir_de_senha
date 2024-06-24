@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <link rel="shortcut icon" href="img/lock-solid.svg" type="image/x-icon">
+    <title>Safe</title>
+    
+</head>
+<body> 
+    <main>
+        <header class="header">
+            <h1 class="title">Gerador de senha</h1>
+            <p class="subtitle">Ultilize nosso gerador de senha online para criar uma senha forte e segura</p>
+        </header>
+    
+        <section class="box">
+            <div class="password">
+                <div class="text">
+                    <input type="text" name="passwordText" id="passwordText" min="4" max="64" value="16">
+                </div>
+
+                <img src="img/icons8-copiar.gif" alt="copy" class="copy">
+                <img  src="img/icons8-actualizar.gif" alt="refresh" class="refresh">
+            </div>
+            <div class="security-indicator">
+                <div id="security-indicator-bar" class="bar"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="box customize">
+            <h3 class="">Personalizar</h3>
+            <div class="ajustation">
+                <div class="action">
+                    <p>Tamanho: <span id="valueScale">16</span></p>
+                    <input type="range" name="escale" id="scalePassword" class="scalePassword" min="4" max="64" value="16">
+                </div>
+                <div id="checkBox">
+                    <label class="checkBox-container">
+
+                        <input type="checkbox" name="textUpp" id="textUpp">
+                        <span class="text">maíuscula</span>
+                        <span class="checkmark"></span>
+
+                    </label>
+
+                    <label class="checkBox-container">
+
+                        <input type="checkbox" name="number" id="number">
+                        <span class="text">Numeros </span>
+                        <span class="checkmark"></span>
+
+                    </label>
+
+                    <label class="checkBox-container">
+
+                        <input type="checkbox" name="simble" id="symbol">
+                        <span class="text">Simbolos</span>
+                        <span class="checkmark"></span>
+
+                    </label>
+                </div>
+            </div>
+        </section>
+        
+        <div id="button">
+            <input type="button" value="Copiar Senha" id="btn">
+        </div>
+        
+        
+    </main>
+</body>
+</html>

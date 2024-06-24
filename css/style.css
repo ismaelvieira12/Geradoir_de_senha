@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+}
+
+:root{
+    --cor01:#6B4B3E;
+    --cor02:#C49E85;
+    --cor03:#FFD6AF;
+
+    /* Cores mais claras */
+    --cor04:#F8F4F9;
+    --cor05:#BEA7E5;
+
+    /* Titles */
+    --title: #2e1e18;
+}
+
+body{
+    padding: 2rem;
+    background-attachment: fixed;
+    background-image: linear-gradient(45deg, var(--cor03), var(--cor04), var(--cor05));
+}
+
+main{
+    max-width: 780px;
+    margin: 0 auto;
+    background-color: #f1f0f0;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(132, 148, 165, 0.8);
+}
+
+.header{
+    text-align: center;
+}
+
+.header .title{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+    color: var(--title);
+}
+
+.header .subtitle{
+    color: var(--cor01);
+    font-size: 1.125rem;
+    padding-bottom: 1.5rem;
+}
+
+.box{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    border-radius: 8px;
+    border-top: none;
+    box-shadow: 0 1px 2px rgba(132, 148, 165, 0.8);
+}
+
+.password{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+}
+
+
+.text{
+    flex: 1;
+}
+
+.password #passwordText{
+    font-family: "Inconsolata", serif;
+    font-size: 3rem;
+    border: none;
+    outline: none;
+    cursor: default;
+    height: 52px;
+    width: 100%;
+    transition: all 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: var(--cor05);
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.password #passwordText.sm{
+    font-size: 2rem;
+}
+
+.password #passwordText.xs{
+    font-size: 1.5rem;
+}
+.password #passwordText.xxs{
+    font-size: 1rem;
+}
+.password img{
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+
+    cursor: pointer;
+    background-color: transparent;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.security-indicator{
+    height: 10px;
+    background-color: #ddd;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.security-indicator .bar{
+    height: 10px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    transition: all 0.2s
+}
+
+.security-indicator .bar.completed{
+    border-top-right-radius: 0;
+}
+
+.security-indicator .bar.critical{
+    background-color: #eb5757;
+}
+
+.security-indicator .bar.warning{
+    background-color: #f2c94c;
+}
+
+.security-indicator .bar.safe{
+    background-color: #27ae60;
+}
+
+.titulo2{
+    color: var(--title);
+    margin-bottom: 2rem;
+    padding: 1rem;
+    font-size: 1.35rem;
+    border: none;
+    border-bottom: solid 0.1px #dfdcdc;
+    font-weight: bold;
+}
+
+/* Estilizando o input range */
+.scalePassword{
+    background-color: var(--cor02);
+    height: 20px;
+    width: 100%;
+    outline: none;
+    appearance: none;
+    border-radius: 5px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    margin-top: 1rem;
+}
+
+/* Para quem vai abrir no google */
+.scalePassword::-webkit-slider-thumb{
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--title);
+    cursor: pointer;
+   
+}
+
+/* para quem vai abrir no mozilla */
+.scalePassword::-moz-range-thumb{
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--title);
+    cursor: pointer;
+}
+
+.scalePassword::-webkit-slider-thumb:hover{
+    box-shadow: 0 0 0 1px var(--title);
+    background-color: var(--cor04); 
+    width: 24px;
+    height: 24px;
+}
+
+.customize .ajustation{
+    display: flex;
+    gap: 3rem;
+    color: #828282;
+    width: 100%;
+    padding-left: 1rem;
+}
+
+.ajustation .action{
+    flex: 1;
+}
+
+#checkBox .text{
+    cursor: pointer;
+}
+
+/* Posixionando o os nomes no lado direito */
+.checkBox-container {
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: noe;
+    user-select: none;
+}
+
+/* Fazendo com que o input checkBox fique invisivel */
+.checkBox-container input{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+/* Estilizando o span que está dentro do label para ativar e desativar */
+.checkBox-container .checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background-color: #ddd;
+    transition: all 0.2s;
+}
+
+/* Adicionando o background ao span */
+.checkBox-container:hover input ~ .checkmark{
+    background-color: #cccccc;
+}
+
+.checkBox-container input:checked ~ .checkmark{
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    background-color: var(--cor01);
+}
+
+/* fAZENDO O CHECK DE DENTRO DO SPAN */
+.checkBox-container .checkmark::after{
+    content: "";
+    display: none;
+    position: absolute;
+    left: 9px;
+    top: 2px;
+    width: 5px;
+    height: 13px;
+    border-radius: 3px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.checkBox-container input:checked ~ .checkmark::after{
+    display: block;
+}
+
+/* Estilizando o botão */
+#button{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding: 2rem;
+}
+
+#button #btn{
+    padding: 1rem;
+    font-family: "Inconsolata", serif;
+    font-size: 1.375rem;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: var(--cor01);
+    color: var(--cor04);
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    opacity: 0.7;
+}
+#button #btn:hover{
+    background-color: #4b362d;
+    border: none;
+    color: var(--cor04);
+    transition: all 0.2s;
+}
+
+
+/* Quando esse projeto for aberto em celular ele entrara nesse codigo */
+@media only screen and (max-width: 480px){
+    .password{
+        padding: 1rem;
+    }
+    .password #passwordText{
+        font-size: 1.5rem;
+    }
+    .password #passwordText.sm{
+        font-size: 1rem;
+    }
+    
+    .password #passwordText.xs{
+        font-size: 1rem;
+    }
+    .password #passwordText.xxs{
+        font-size: 1rem;
+    }
+
+    .password img{
+        width: 22px;
+        height: 22px;
+    }
+}
